@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>For Aarna 💖</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Georgia', serif;
+      background: linear-gradient(to bottom right, #ffe6f0, #ffd6e0);
+      color: #4b2e2e;
+      overflow: hidden;
+    }
+
+    h1 {
+      text-align: center;
+      margin-top: 50px;
+      font-size: 3em;
+    }
+
+    .letter {
+      max-width: 700px;
+      margin: 40px auto;
+      padding: 30px;
+      background-color: #fff0f5;
+      border-radius: 15px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+      font-size: 1.2em;
+      line-height: 1.7em;
+    }
+
+    .heart {
+      position: fixed;
+      width: 20px;
+      height: 20px;
+      background: red;
+      transform: rotate(45deg);
+      animation: float 10s infinite;
+    }
+
+    .heart::before,
+    .heart::after {
+      content: '';
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background: red;
+      border-radius: 50%;
+    }
+
+    .heart::before {
+      top: -10px;
+      left: 0;
+    }
+
+    .heart::after {
+      left: -10px;
+      top: 0;
+    }
+
+    @keyframes float {
+      0% {
+        transform: translateY(100vh) rotate(45deg);
+        opacity: 0;
+      }
+      50% {
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(-10vh) rotate(45deg);
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>To My Dearest Aarna 💗</h1>
+
+  <div class="letter">
+    <p>Hi bbg,</p>
+    <p>
+      I just wanted to say how incredibly lucky I feel to have you in my life. I love you more than anything and your presence makes everything feel right.
+    </p>
+    <p>
+      I like your personality, your kindness, and the way you make me feel like the best version of myself. Every moment with you is perfect and I can't wait to marry you.
+    </p>
+    <p>
+      You’re my lil babygirl and i hope you get everything you want in life
+    </p>
+    <p>
+      Always yours,<br>
+      <strong>Arnav 💌</strong>
+    </p>
+  </div>
+
+  <!-- Floating Hearts -->
+  <script>
+    function createHeart() {
+      const heart = document.createElement('div');
+      heart.className = 'heart';
+      heart.style.left = Math.random() * 100 + 'vw';
+      heart.style.animationDuration = 5 + Math.random() * 5 + 's';
+      document.body.appendChild(heart);
+      setTimeout(() => heart.remove(), 10000);
+    }
+    setInterval(createHeart, 300);
+  </script>
+
+</body>
+</html>
